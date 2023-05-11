@@ -11,15 +11,17 @@ import com.thoughtworks.qdox.model.JavaClass;
 
 public class ArquivoJava {
 	private String caminhoAbsoluto;
+	private String destinoXML;
 	private String nomeArquivo;
 	
 	public ArquivoJava() {
 		
 	}
 	
-	public ArquivoJava(String caminhoAbsoluto, String nomeArquivo) {
+	public ArquivoJava(String caminhoAbsoluto, String nomeArquivo, String destinoXML) {
 		this.caminhoAbsoluto = caminhoAbsoluto;
 		this.nomeArquivo = nomeArquivo;
+		this.destinoXML = destinoXML;
 	}
 
 	public String getNomeArquivo() {
@@ -36,6 +38,14 @@ public class ArquivoJava {
 
 	public void setCaminhoAbsoluto(String caminhoAbsoluto) {
 		this.caminhoAbsoluto = caminhoAbsoluto;
+	}
+
+	public String getDestinoXML() {
+		return destinoXML;
+	}
+
+	public void setDestinoXML(String destinoXML) {
+		this.destinoXML = destinoXML;
 	}
 	
 	/**
@@ -83,7 +93,7 @@ public class ArquivoJava {
             }
 
 			//Criando um objeto XmlFile com os dados do arquivo
-			XmlFile arquivo = new XmlFile(nomeArquivo, allClasses);
+			XmlFile arquivo = new XmlFile(nomeArquivo, allClasses, destinoXML);
 			
 			arquivo.gerarXml();
 

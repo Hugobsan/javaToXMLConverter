@@ -16,15 +16,16 @@ public class XmlFile {
 
     private List<Class> classes;
     private String fileName;
-    private String filePath  = "C:\\temp\\xml";
+    private String filePath;
 
 
     public XmlFile() {
     }
 
-    public XmlFile(String fileName, List<Class> classes) {
+    public XmlFile(String fileName, List<Class> classes, String filePath) {
         this.fileName = fileName;
         this.classes = classes;
+        this.filePath = filePath;
     }
 
     public String getFileName() {
@@ -41,6 +42,14 @@ public class XmlFile {
 
     public void setClasses(List<Class> classes) {
         this.classes = classes;
+    }
+
+    public String getFilePath() {
+        return this.filePath;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
     }
 
     /**
