@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 public class Principal {
 
 	public static void main(String[] args) {
-		JOptionPane.showConfirmDialog( null, "Bem-vindo ao sistema de conversão .java para .xml\n O sistema encontra-se em fase inicial e é passível de erros.\n\n Clique em OK para continuar.", "Bem-vindo", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showConfirmDialog( null, "Bem-vindo ao sistema de conversão .java para .xml\n\n Clique em OK para continuar.", "Bem-vindo", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
 		
 		String javaFilesPath = JOptionPane.showInputDialog(null, "Digite o caminho absoluto do diretório que contém os arquivos Java.\n Ex: C:\\temp\\jEdit", "Arquivos Java", JOptionPane.INFORMATION_MESSAGE, null, null, "C:\\temp\\jEdit").toString();
 

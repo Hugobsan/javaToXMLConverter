@@ -97,8 +97,8 @@ public class ArquivoJava {
 			
 			arquivo.gerarXml();
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println("Arquivo incompatível!");
         }
 	}
 }
